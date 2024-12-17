@@ -134,6 +134,8 @@ class SpreadsheetStorage(BaseSpreadsheetStorage):
         if user_type == "student":
             if auth_handler.get_student_by_user_id(user_id) == {}:
                 auth_handler.add_student(user_id, **auth_data)
+            elif auth_handler.remove_student(str(user_id)):
+                    auth_handler.add_student(user_id, **auth_data)
         elif user_type == "teacher":
             if auth_handler.get_teacher_by_user_id(user_id) == {}:
                 auth_handler.add_student(user_id, **auth_data)

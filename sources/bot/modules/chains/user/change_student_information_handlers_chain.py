@@ -74,7 +74,7 @@ class ChangeStudentInformationHandlersChain(HandlersChain):
         :type state: :obj:`FSMContext`
         """
         await ChangeStudentInformationStates.next()
-        await state.update_data(change={"name": message.text})
+        await state.update_data(auth={"name": message.text})
 
         await message.answer("Укажите номер группы.")
 
@@ -95,8 +95,8 @@ class ChangeStudentInformationHandlersChain(HandlersChain):
         await ChangeStudentInformationStates.next()
 
         data = await state.get_data()
-        data["change"]["group"] = message.text
-        await state.update_data(change=data["change"])
+        data["auth"]["group"] = message.text
+        await state.update_data(auth=data["auth"])
 
         await message.answer("Укажите номер подгруппы.")
 
@@ -118,8 +118,8 @@ class ChangeStudentInformationHandlersChain(HandlersChain):
         await ChangeStudentInformationStates.next()
 
         data = await state.get_data()
-        change_data = data["change"]
+        change_data = data["auth"]
         change_data["subgroup"] = message.text
         await state.update_data(auth=change_data)
 
-        await message.answer(f"Спасибо за регистрацию.\n\n{MainHandlersChain.get_info(data)}")
+        await message.answer(f"Данные успешно изменены.\n\n{MainHandlersChain.get_info(data)}")
