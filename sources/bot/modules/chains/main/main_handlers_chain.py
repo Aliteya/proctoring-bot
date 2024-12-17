@@ -42,6 +42,178 @@ class MainKeyboardsBuilder:
                 },
             ]
         )
+ # STUDENT   
+    @staticmethod
+    def get_student_menu_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню студента": "student_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_labwork_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню работы с лр": "student_labwork_menu",
+                },
+                {
+                    "Меню прохождения тестов": "student_pass_test_menu",
+                },
+                {
+                    "Меню редактирования профиля": "edit_student_info",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_choose_discipline_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню выбора дисциплины": "choose_discipline",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_labwork_choice_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню выбора лабораторной работы": "labwork_choice",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_chosen_labwork_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню просмотра информации о лабораторной работе": "chosen_labwork_info",
+                },
+                {
+                    "Меню добавления выполненной лабораторной работы": "add_labwork",
+                },
+            ]
+        )
+# TEACHER  
+    @staticmethod
+    def get_teacher_menu_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_edit_labwork_info_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_edit_discipline_info_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_interaction_menu_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_control_test_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+
+    
 
     @staticmethod
     def get_info_keyboard() -> InlineKeyboardMarkup:
