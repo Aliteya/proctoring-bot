@@ -59,6 +59,9 @@ class MainKeyboardsBuilder:
                 {
                     "Отправить лабораторную работу": "lab",
                 },
+                {
+                    'edit_student_info': 'edit_student_info'
+                },
             ]
         )
 
