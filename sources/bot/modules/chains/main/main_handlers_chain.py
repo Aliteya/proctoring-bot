@@ -46,7 +46,7 @@ class MainKeyboardsBuilder:
     @staticmethod
     def get_student_menu_keyboard() -> InlineKeyboardMarkup:
         """
-        Gets keyboard to send message to private user chat.
+        Gets keyboard to send message to student private user chat.
 
         :return: Returns inline keyboard markup.
         :rtype: :obj:`InlineKeyboardMarkup`
@@ -131,9 +131,27 @@ class MainKeyboardsBuilder:
                 },
             ]
         )
-# TEACHER  
+
+# TEACHER
+  
     @staticmethod
     def get_teacher_menu_keyboard() -> InlineKeyboardMarkup:
+        """
+        Gets keyboard to send message to teacher private user chat.
+
+        :return: Returns inline keyboard markup.
+        :rtype: :obj:`InlineKeyboardMarkup`
+        """
+        return KeyboardBuilder.get_inline_keyboard_markup(
+            [
+                {
+                    "Меню преподавателя": "teacher_menu",
+                },
+            ]
+        )
+    
+    @staticmethod
+    def get_managment_discipline_keyboard() -> InlineKeyboardMarkup:
         """
         Gets keyboard to send message to private user chat.
 
@@ -143,7 +161,16 @@ class MainKeyboardsBuilder:
         return KeyboardBuilder.get_inline_keyboard_markup(
             [
                 {
-                    "Меню преподавателя": "teacher_menu",
+                    "Меню редактирования информации о лабораторной работе": "edit_labwork_info",
+                },
+                {
+                    "Меню редактирования информации о дисциплине": "edit_discipline_info",
+                },
+                {
+                    "Меню взаимодействия со студентами": "interaction_menu",
+                },
+                {
+                    "Меню управления тестами": "test_managment",
                 },
             ]
         )
@@ -159,7 +186,13 @@ class MainKeyboardsBuilder:
         return KeyboardBuilder.get_inline_keyboard_markup(
             [
                 {
-                    "Меню преподавателя": "teacher_menu",
+                    "Меню выставления дедлайнов": "set_deadlines",
+                },
+                {
+                    "Меню добавления условий лабораторных работ": "add_conditions",
+                },
+                {
+                    "Меню распределения вариантов лр": "distribute_options",
                 },
             ]
         )
@@ -175,13 +208,17 @@ class MainKeyboardsBuilder:
         return KeyboardBuilder.get_inline_keyboard_markup(
             [
                 {
-                    "Меню преподавателя": "teacher_menu",
+                    "Меню добавления методических пособий": "add_aids",
                 },
+                {
+                    "Меню добавления описания": "add_descriptions",
+                },
+
             ]
         )
-    
+
     @staticmethod
-    def get_interaction_menu_keyboard() -> InlineKeyboardMarkup:
+    def get_interaction_keyboard() -> InlineKeyboardMarkup:
         """
         Gets keyboard to send message to private user chat.
 
@@ -191,13 +228,17 @@ class MainKeyboardsBuilder:
         return KeyboardBuilder.get_inline_keyboard_markup(
             [
                 {
-                    "Меню преподавателя": "teacher_menu",
+                    "Меню редактирования ФИО студента": "edit_student_fullname",
                 },
+                {
+                    "Меню просмотра данных студента": "view_student_data",
+                },
+
             ]
         )
     
     @staticmethod
-    def get_control_test_keyboard() -> InlineKeyboardMarkup:
+    def get_distribute_options_keyboard() -> InlineKeyboardMarkup:
         """
         Gets keyboard to send message to private user chat.
 
@@ -207,13 +248,13 @@ class MainKeyboardsBuilder:
         return KeyboardBuilder.get_inline_keyboard_markup(
             [
                 {
-                    "Меню преподавателя": "teacher_menu",
+                    "Случайное распределение": "random_distribution",
+                },
+                {
+                    "Распределение вручную": "manual_distribution",
                 },
             ]
         )
-    
-
-    
 
     @staticmethod
     def get_info_keyboard() -> InlineKeyboardMarkup:
