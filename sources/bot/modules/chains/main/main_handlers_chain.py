@@ -59,6 +59,9 @@ class MainKeyboardsBuilder:
                 {
                     "Отправить лабораторную работу": "lab",
                 },
+                {
+                    'edit_student_info': 'edit_student_info'
+                },
             ]
         )
 
@@ -202,6 +205,6 @@ class MainHandlersChain(HandlersChain):
 
             return f"Информация о Вас:\nФИО: {name}\nГруппа: {group}\nПодгруппа: {subgroup}\n"
         elif user_data["type"] == "teacher":
-            name = auth_data.get("ФИО")
+            name = auth_data.get("name")
 
             return f"Информация о Вас:\nФИО: {name}\n"
